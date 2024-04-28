@@ -9,7 +9,7 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
 2. Clone this repository
 
     ```bash
-    git clone 
+    git clone https://github.com/samueltan3972/ML-Assignment.git
     ```
 
 3. Install necesseray dependency
@@ -17,7 +17,7 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
     ```bash
     cd <bla>
     pip install pipenv # Optional, but recommend using virtual environment
-    pipenv shell
+    python3 -m pipenv shell
     pip install -r requirements.txt
     ```
 
@@ -26,3 +26,6 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
     ```bash
     jupyter lab
     ```
+
+Dataset Link:
+https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023
