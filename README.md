@@ -21,10 +21,16 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
     pip install -r requirements.txt
     ```
 
-4. Start Jupyter Lab and open Assignment.ipynb
+4. Start Jupyter Lab and open Model_Training.ipynb to see the training process. However, the model has been trained, no further training is required.
 
     ```bash
     jupyter lab
+    ```
+
+5. Refer to deploy.py to run the developed application for deployment.
+
+    ```bash
+    python3 deploy.py
     ```
 
 Dataset Link:
