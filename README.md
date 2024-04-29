@@ -30,7 +30,7 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
 5. Refer to deploy.py to run the developed application for deployment.
 
     ```bash
-    python3 deploy.py
+    streamlit run Credit_Card_Fraud_Detection_App.py
     ```
 
 Dataset Link:
