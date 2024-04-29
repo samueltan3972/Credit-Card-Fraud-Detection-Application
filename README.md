@@ -4,7 +4,7 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
 
 ## Getting Started
 
-1. Install Python 3.10
+1. Download and Install [Python 3.10](https://www.python.org/downloads/release/python-31011/)
 
 2. Clone this repository
 
