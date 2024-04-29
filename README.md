@@ -18,7 +18,8 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
     cd <bla>
     pip install pipenv # Optional, but recommend using virtual environment
     python3 -m pipenv shell
-    pip install -r requirements.txt
+    pipenv install # if using pipenv, but below method works whether is pipenv
+    pip install -r requirements.txt # choose 1 to run only, if above is selected, don't run this
     ```
 
 4. Start Jupyter Lab and open Model_Training.ipynb to see the training process. However, the model has been trained, no further training is required.
