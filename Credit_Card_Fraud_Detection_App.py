@@ -146,5 +146,7 @@ if st.session_state.stage >= 3:
     js = f'window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").then(r => window.location.href);'
     st_javascript(js)
 
+    st.video("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+
     st.image("img/scam.jpg")
     st.button('I TOLD YOU!', on_click=set_state, args=[0])
