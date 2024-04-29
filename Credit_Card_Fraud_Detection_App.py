@@ -144,7 +144,6 @@ if st.session_state.stage >= 2:
 # 3. Start Over
 if st.session_state.stage >= 3:
     js = f'window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").then(r => window.location.href);'
-    # js = f'window.location.href = "http://www.w3schools.com";'
     st_javascript(js)
 
     st.image("img/scam.jpg")
