@@ -5,6 +5,7 @@ import webbrowser as wb
 
 from random import random, randrange
 from sklearn.preprocessing import StandardScaler
+from streamlit_javascript import st_javascript
 
 filename = {
     "lr": "models/logistic_regression.sav",
@@ -142,7 +143,9 @@ if st.session_state.stage >= 2:
 
 # 3. Start Over
 if st.session_state.stage >= 3:
-    wb.open_new_tab(f"https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-    st.image("img/scam.jpg")
+    js = f'window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").then(r => window.location.href);'
+    # js = f'window.location.href = "http://www.w3schools.com";'
+    st_javascript(js)
 
+    st.image("img/scam.jpg")
     st.button('I TOLD YOU!', on_click=set_state, args=[0])
