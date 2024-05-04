@@ -25,7 +25,7 @@ def load_random_forest():
     return pickle.load(open(filename["rf"], "rb"))
 
 def load_svm():
-    return pickle.load(open(filename["svm"], "rb"))
+    return pickle.load(open("models/SVM.sav", "rb"))
 
 def generate_random_input():
     """
@@ -39,6 +39,17 @@ def generate_random_input():
     input["Amount"] = [randrange(100, 9999999) / 100]
     
     return pd.DataFrame(data=input)
+
+def generate_input_from_csv():
+    """
+    Generate input from csv file.
+
+    Returns:
+        pd.DataFrame: generated input
+    """
+    df = pd.read_csv("input.csv").drop(['id','Class'], axis=1)
+
+    return df.sample().reset_index(drop=True)
 
 def generate_model_result(x=None):
     """
@@ -55,17 +66,17 @@ def generate_model_result(x=None):
     rf_model = load_random_forest()
     svm_model = load_svm()
 
-    x = x if x is not None else generate_random_input()
+    x = x if x is not None else generate_input_from_csv()
 
-    # Data Preprocess
-    sc = StandardScaler()
-    x_scaled = sc.fit_transform(x) 
-    x_scaled_df = pd.DataFrame(x_scaled, columns=x.columns)
+    # Data Preprocess, this code will cause result to always be 1
+    # sc = StandardScaler()
+    # x_scaled = sc.fit_transform(x) 
+    # x_scaled_df = pd.DataFrame(x_scaled, columns=x.columns)
 
     # Run inference
-    lr_result = lr_model.predict(x_scaled_df)[0]
-    rf_result = rf_model.predict(x_scaled_df)[0]
-    svm_result = svm_model.predict(x_scaled_df)[0]
+    lr_result = lr_model.predict(x)[0]
+    rf_result = rf_model.predict(x)[0]
+    svm_result = svm_model.predict(x)[0]
     
     return {"input": x, "lr_result": lr_result, "rf_result": rf_result, "svm_result":svm_result}
 
@@ -91,7 +102,8 @@ if st.session_state.stage == 0:
 # 1. Generate Random Input
 if st.session_state.stage >= 1:
     if st.session_state.stage == 1:
-        x = generate_random_input()
+        # x = generate_random_input()
+        x = generate_input_from_csv()
         st.session_state.x = x
     
     x = st.session_state.x

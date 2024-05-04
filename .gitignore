@@ -1,4 +1,4 @@
-*.csv
+creditcard_2023.csv
 .ipynb_checkpoints
 *.Identifier
 *.zip
