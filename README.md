@@ -2,6 +2,7 @@
 
 This is a group assignment project for WQD7006 Machine Learning for Data Science for the Master of Data Science at University of Malaya (UM). This project uses [Credit Card Fraud Detection Dataset 2023](https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023) from Kaggle. The [report](report/G5_WQD7006_Report.pdf) and [slides](report/G5_WQD7006_Slides.pdf) of this project can be found at the [report folder](report/G5_WQD7006_Report.pdf). 
 
+
 <img src="img/scam_is_everywhere.png" alt="Scam is Everywhere"/>
 
 ---
@@ -25,9 +26,9 @@ The result of the trained model is presented as follow:
 
 The model is then deployed with streamlit community cloud: [https://ummlassignment-g5.streamlit.app](https://ummlassignment-g5.streamlit.app/). The link may be down as the application enter sleeping mode.
 
-<img src="img/demo.png" alt="Streamlit App Demo" height="600"/>
+<img src="img/demo.png" alt="Streamlit App Demo" height="750"/>
 
-<img src="img/scam.jpg" alt="Scam" width="565"/>
+<img src="img/scam.jpg" alt="Scam" width="680"/>
 
 ---
 
