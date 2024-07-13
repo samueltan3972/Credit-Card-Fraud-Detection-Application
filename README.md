@@ -28,7 +28,7 @@ The model is then deployed with streamlit community cloud: [https://ummlassignme
 
 <img src="img/demo.png" alt="Streamlit App Demo" height="750"/>
 
-<img src="img/scam.jpg" alt="Scam" width="680"/>
+<img src="img/scam.jpg" alt="Scam" width="610"/>
 
 ---
 
