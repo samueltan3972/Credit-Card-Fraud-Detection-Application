@@ -1,6 +1,24 @@
-# UM Machine Learning Assignment
+# Credit Card Fraud Detection Application
 
-This repo contains file and hang bang lang about UM Machine Learning Assignment. Haiyaa, u know what is this la!
+This is a group assignment project for WQD7006 Machine Learning for Data Science for the Master of Data Science at University of Malaya (UM). This project uses [Credit Card Fraud Detection Dataset 2023](https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023) from Kaggle. Logistic Regression, Random Forest, and SVM are the model select for fraud detection. Random Forest is found to have the best accuracy. The [report](report/G5_WQD7006_Report.pdf) and [slides](report/G5_WQD7006_Slides.pdf) of this project can be found at the [report folder](report/G5_WQD7006_Report.pdf).
+
+The result of the trained model is presented as follow:
+
+| Models                | Accuracy (Trainig Set)    | Accuracy (Testing Set)    |
+| ----------------      | :---------------------:   | :---------------------:   |
+| Logistic Regression   | 0.96                      | 0.96                      |
+| Random Forest         | 1.0                       | 1.0                       |
+| SVM                   | 1.0                       | 1.0                       |
+
+---
+
+## Application Demo
+
+The model is then deployed with streamlit community cloud: [https://ummlassignment-g5.streamlit.app](https://ummlassignment-g5.streamlit.app/). The link may be down as the application is entering sleeping mode.
+
+![Streamlit App Demo](img/demo.png)
+
+---
 
 ## Getting Started
 
@@ -28,7 +46,7 @@ This repo contains file and hang bang lang about UM Machine Learning Assignment.
     jupyter lab
     ```
 
-5. Refer to deploy.py to run the developed application for deployment.
+5. To run the developed application for deployment.
 
     ```bash
     streamlit run Credit_Card_Fraud_Detection_App.py
